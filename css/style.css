@@ -1,0 +1,280 @@
+/* ---------------------------------------------------
+   Alyssa M. Taylor -- personal/academic site
+   Baseline stylesheet
+--------------------------------------------------- */
+
+:root {
+  --text: #232323;
+  --muted: #5a5a5a;
+  --bg: #ffffff;
+  --bg-alt: #f6f5f2;
+  --accent: #6b4f3b;
+  --border: #e3e0da;
+  --max-width: 780px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Iowan Old Style", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--bg);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  z-index: 10;
+}
+
+/* Header / nav */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 1.25rem;
+}
+
+.site-title {
+  margin: 0 0 0.9rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.site-title a {
+  color: var(--text);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.site-nav a {
+  color: var(--muted);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* Main content */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+main h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+main h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* Home page layout */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.hero-text {
+  flex: 1 1 320px;
+}
+
+.hero-photo {
+  flex: 0 0 220px;
+}
+
+.hero-photo img {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.hero-photo figcaption {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+.dog-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.dog-section img {
+  flex: 0 0 160px;
+  border-radius: 6px;
+}
+
+.dog-section .dog-text {
+  flex: 1 1 260px;
+}
+
+/* Entry lists (publications, research, teaching) */
+.entry {
+  margin-bottom: 1.6rem;
+}
+
+.entry .meta {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.entry-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry-list li {
+  margin-bottom: 1.3rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry-list li:last-child {
+  border-bottom: none;
+}
+
+.tag {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  margin-bottom: 0.4rem;
+}
+
+/* CV page */
+.cv-download {
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  padding: 0.6rem 1.1rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.cv-download:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.placeholder-note {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  background: #fff8e6;
+  border: 1px dashed #d8b465;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  color: #6b5a2a;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .site-nav ul {
+    gap: 1rem 1.25rem;
+  }
+}
